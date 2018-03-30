@@ -1,0 +1,7 @@
+可配置自己的属性，并使用@Value("${aaa.bbb}")或@Value("#{aaa.bbb}")去使用。
+
+使用随机数，${random.value}，random.int，random.long，random.int(10)，random.int[10,20]。
+
+java -jar eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1
+
+java -jar springboot-hello-1.0-SNAPSHOT.jar --server.port=9090
