@@ -13,6 +13,8 @@
         <module>springboot-consumer</module>
         <module>springboot-tools</module>
         <module>quartz</module>
+        <module>zk-api</module>
+        <module>zk-reg</module>
     </modules>
 
     <parent>

@@ -3,31 +3,34 @@ package com.wangnz.springboot.hello.controller;
 import com.wangnz.springboot.tools.StringUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-@Api(tags= "系统安全-角色管理", description="RoleController")
+
+@Api(tags = "系统安全-角色管理", description = "RoleController")
 @RestController
 public class Test1Controller {
     private static Logger log = LoggerFactory.getLogger(Test1Controller.class);
 
     @ApiOperation(value = "简单的输入什么id就输出什么", notes = "没什么啦……", httpMethod = "GET")
     @RequestMapping(value = "/hello1", method = RequestMethod.GET)
-    public String hello1() {
+    public String hello1(@ApiParam(name = "token", value = "token", required = true) @RequestParam(name = "token", required = true) String token) {
         log.info("hello1 start");
         StringUtils.sayHello();
         log.info("hello1 end");
-        return "hello1";
+        return token;
     }
 
-    @ApiOperation(value="hello接口")
+    @ApiOperation(value = "hello接口")
     @RequestMapping(value = "/hello2", method = RequestMethod.GET)
-    public String hello2() {
+    public String hello2(@ApiParam(name = "token", value = "token", required = true) String token) {
         log.info("hello2 start");
         StringUtils.sayHello();
         log.info("hello2 end");
-        return "hello2";
+        return token;
     }
 }
