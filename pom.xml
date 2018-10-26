@@ -15,6 +15,7 @@
         <module>quartz</module>
         <module>zk-api</module>
         <module>zk-reg</module>
+        <module>sb-hello</module>
     </modules>
 
     <parent>
