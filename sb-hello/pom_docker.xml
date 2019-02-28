@@ -48,32 +48,6 @@
                     </buildArgs>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>com.spotify</groupId>-->
-                <!--<artifactId>docker-maven-plugin</artifactId>-->
-                <!--<version>0.4.12</version>-->
-                <!--&lt;!&ndash;docker镜像相关的配置信息&ndash;&gt;-->
-                <!--<configuration>-->
-                    <!--&lt;!&ndash;镜像名，这里用工程名&ndash;&gt;-->
-                    <!--<imageName>${project.artifactId}</imageName>-->
-                    <!--&lt;!&ndash;TAG,这里用工程版本号&ndash;&gt;-->
-                    <!--<imageTags>-->
-                        <!--<imageTag>${project.version}</imageTag>-->
-                    <!--</imageTags>-->
-                    <!--&lt;!&ndash;镜像的FROM，使用java官方镜像&ndash;&gt;-->
-                    <!--<baseImage>wnz/jre</baseImage>-->
-                    <!--&lt;!&ndash;该镜像的容器启动后，直接运行spring boot工程&ndash;&gt;-->
-                    <!--<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>-->
-                    <!--&lt;!&ndash;构建镜像的配置信息&ndash;&gt;-->
-                    <!--<resources>-->
-                        <!--<resource>-->
-                            <!--<targetPath>/</targetPath>-->
-                            <!--<directory>${project.build.directory}</directory>-->
-                            <!--<include>${project.build.finalName}.jar</include>-->
-                        <!--</resource>-->
-                    <!--</resources>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
         </plugins>
     </build>
 </project>
