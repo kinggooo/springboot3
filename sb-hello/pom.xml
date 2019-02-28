@@ -42,7 +42,7 @@
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.0</version>
                 <configuration>
-                    <repository>demo/${project.artifactId}</repository>
+                    <repository>${project.artifactId}</repository>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
