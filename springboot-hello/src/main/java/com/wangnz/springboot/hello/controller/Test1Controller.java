@@ -1,15 +1,17 @@
 package com.wangnz.springboot.hello.controller;
 
+import com.wangnz.springboot.hello.pojo.Student;
+import com.wangnz.springboot.hello.pojo.Test1;
 import com.wangnz.springboot.tools.StringUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Api(tags = "系统安全-角色管理", description = "RoleController")
 @RestController
@@ -32,5 +34,19 @@ public class Test1Controller {
         StringUtils.sayHello();
         log.info("hello2 end");
         return token;
+    }
+
+    @RequestMapping(value = "/test1", method = RequestMethod.POST)
+    public String test1(String p1, Integer p2) {
+        String ret = p1 + " " + p2;
+        log.info(ret);
+        return "test1";
+    }
+
+    @RequestMapping(value = "/test2", method = RequestMethod.POST)
+    @ResponseBody
+    public String test2(@RequestBody List<Student> students) {
+        log.info("test2");
+        return "";
     }
 }
