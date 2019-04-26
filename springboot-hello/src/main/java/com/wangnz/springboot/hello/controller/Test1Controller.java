@@ -1,14 +1,15 @@
 package com.wangnz.springboot.hello.controller;
 
+import com.wangnz.springboot.hello.config.MultiRequestBody;
+import com.wangnz.springboot.hello.pojo.Book;
+import com.wangnz.springboot.hello.pojo.Paper;
 import com.wangnz.springboot.hello.pojo.Student;
-import com.wangnz.springboot.hello.pojo.Test1;
 import com.wangnz.springboot.tools.StringUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,9 +38,7 @@ public class Test1Controller {
     }
 
     @RequestMapping(value = "/test1", method = RequestMethod.POST)
-    public String test1(String p1, Integer p2) {
-        String ret = p1 + " " + p2;
-        log.info(ret);
+    public String test1(@MultiRequestBody Book book, @MultiRequestBody Paper paper) {
         return "test1";
     }
 

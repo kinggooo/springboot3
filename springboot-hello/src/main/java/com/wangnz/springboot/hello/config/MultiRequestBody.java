@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-@interface MultiRequestBody {
+public @interface MultiRequestBody {
     /**
      * 是否必须出现的参数
      */
