@@ -45,7 +45,14 @@ public class Test1Controller {
     @RequestMapping(value = "/test2", method = RequestMethod.POST)
     @ResponseBody
     public String test2(@RequestBody List<Student> students) {
-        log.info("test2");
+        log.info("test22");
+        return "";
+    }
+
+    @RequestMapping(value = "/test3", method = RequestMethod.POST)
+    @ResponseBody
+    public String test3(String name) {
+        log.info("test33");
         return "";
     }
 }
