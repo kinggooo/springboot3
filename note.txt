@@ -7,3 +7,5 @@ java -jar eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1
 java -jar springboot-hello-1.0-SNAPSHOT.jar --server.port=9090
 
 mvn clean package dockerfile:build -f pom_docker.xml
+
+docker run -d -p 9090:9090 --name app1 sb-hello
