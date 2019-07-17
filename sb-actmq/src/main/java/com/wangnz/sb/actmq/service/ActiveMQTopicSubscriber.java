@@ -1,15 +1,15 @@
-package com.wangnz.springboot.hello.service;
+package com.wangnz.sb.actmq.service;
 
 
-import com.wangnz.springboot.hello.constant.ActiveMQTopicConst;
+import com.wangnz.sb.actmq.constant.ActiveMQTopicConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @description ActiveMQ主题消息订阅者
  * @author WANGNANZHI
+ * @description ActiveMQ主题消息订阅者
  * @date 2019年3月22日 下午13:30:00
  * @Copyright 版权所有 (c) www.ok328.club
  * @memo 无备注说明

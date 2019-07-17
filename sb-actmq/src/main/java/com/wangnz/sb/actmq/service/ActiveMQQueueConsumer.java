@@ -1,4 +1,4 @@
-package com.wangnz.springboot.hello.service;
+package com.wangnz.sb.actmq.service;
 
 
 import com.wangnz.springboot.hello.constant.ActiveMQQueueConst;

@@ -1,8 +1,7 @@
-package com.wangnz.springboot.hello.service;
+package com.wangnz.sb.actmq.service;
 
 
-import com.wangnz.springboot.hello.constant.ActiveMQQueueConst;
-import com.wangnz.springboot.hello.constant.ActiveMQTopicConst;
+import com.wangnz.sb.actmq.constant.ActiveMQQueueConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;

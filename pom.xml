@@ -16,6 +16,7 @@
         <module>zk-api</module>
         <module>zk-reg</module>
         <module>sb-hello</module>
+        <module>sb-actmq</module>
     </modules>
 
     <!--<parent>-->

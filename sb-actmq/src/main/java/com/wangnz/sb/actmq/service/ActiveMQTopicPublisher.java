@@ -1,4 +1,4 @@
-package com.wangnz.springboot.hello.service;
+package com.wangnz.sb.actmq.service;
 
 import org.apache.activemq.command.ActiveMQTopic;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package com.wangnz.springboot.hello.constant;
+package com.wangnz.sb.actmq.constant;
 
 /**
  * @description ActiveMQ主题常量
