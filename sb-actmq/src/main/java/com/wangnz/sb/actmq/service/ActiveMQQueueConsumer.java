@@ -1,7 +1,7 @@
 package com.wangnz.sb.actmq.service;
 
 
-import com.wangnz.springboot.hello.constant.ActiveMQQueueConst;
+import com.wangnz.sb.actmq.constant.ActiveMQQueueConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jms.annotation.JmsListener;
