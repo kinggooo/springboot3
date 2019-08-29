@@ -3,12 +3,14 @@ package com.wangnz.springboot.hello.config;
 import com.wangnz.springboot.hello.interceptor.LoggingClientHttpRequestInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.BufferingClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
-public class RestTemplateConfig {
+@Configuration
+public class RestClientConfiguration {
     @Value("${remote.maxTotalConnect:0}")
     private int maxTotalConnect; //连接池的最大连接数默认为0
 
@@ -129,3 +131,4 @@ public class RestTemplateConfig {
         return template;
     }
 }
+

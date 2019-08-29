@@ -7,18 +7,20 @@ import com.wangnz.springboot.hello.common.ResultFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 public class Test1Controller {
     private static Logger log = LoggerFactory.getLogger(Test1Controller.class);
 
-    @Value("${bh.q1file}")
+    @Value("${sb.exportFilePath}")
     private String Q1File;
 
     @RequestMapping(value = "/hello1", method = RequestMethod.POST)
@@ -37,5 +39,15 @@ public class Test1Controller {
 //        return ResultFactory.buildSuccessResult("登陆成功。");
 
         return JSON.parseObject(result.toString().trim());
+    }
+
+    @GetMapping(value = "/uploadC1", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public JSONObject uploadC1() throws Exception {
+        System.out.println("接口uploadC1");
+        List<String> datas = new ArrayList<>();
+
+//        String jsonStr = JSONObject.toJSONString(loanApplyInfo);
+//        Map<String, String> paramMap = JSONObject.parseObject(jsonStr, HashMap.class);
+        return JSON.parseObject("");
     }
 }
