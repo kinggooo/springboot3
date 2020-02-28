@@ -17,6 +17,7 @@
         <module>zk-reg</module>
         <module>sb-hello</module>
         <module>sb-actmq</module>
+        <module>batch</module>
     </modules>
 
     <!--<parent>-->
@@ -27,7 +28,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
+        <version>2.1.5.RELEASE</version>
     </parent>
 
     <properties>
