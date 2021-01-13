@@ -1,0 +1,9 @@
+server:
+  port: 9090
+
+#showSql
+logging:
+  config: classpath:log4j2-test.xml
+  level:
+    com:
+      em: debug
